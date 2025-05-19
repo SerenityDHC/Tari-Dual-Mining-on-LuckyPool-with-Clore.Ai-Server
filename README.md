@@ -23,7 +23,7 @@ Enter SSH Password
 apt update && apt upgrade -y
 apt install wget unzip git build-essential cmake libhwloc-dev libuv1-dev libssl-dev -y
 ```
-When prompted select "Use Existing SSH" option 2
+When prompted select "Keep the local version" option 2
 <br><br>
 
 
