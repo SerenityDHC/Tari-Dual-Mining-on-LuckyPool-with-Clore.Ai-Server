@@ -40,7 +40,7 @@ cd SRBMiner-Multi-2-8-8
 ```bash
 nano start_mining.sh
 ```
-Copy this code into notepad and replace <TARI_WALLET>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 
 Then paste the edited version into the start_mining.sh file
 ```bash
@@ -51,10 +51,10 @@ cd /root/SRBMiner-Multi-2-8-8
 ./SRBMiner-MULTI \
   --algorithm sha3x \
   --pool tari.luckypool.io:6118 \
-  --wallet <TARI_WALLET.WORKER_NAME> \
+  --wallet <TARI_WALLET>.<WORKER_NAME> \
   --algorithm randomx \
-  --pool mine-tari-monero.luckypool.io:443 \
-  --wallet <MONERO_WALLET=DIFF.WORKER_NAME> \
+  --pool mine-tari-monero.luckypool.io:8118 \
+  --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages
 ```
