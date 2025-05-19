@@ -30,7 +30,6 @@ cd SRBMiner-Multi-2-8-8
 nano start_mining.sh
 ```
 Replace Tari wallet address, Monerao wallet address and Miner names.
-Paste edited version into the star_mining.sh file
 ```bash
 #!/bin/bash
 cd /root/SRBMiner-Multi-2-8-8
@@ -46,4 +45,17 @@ Save the file:
 ```bash
 chmod +x start_mining.sh
 ./start_mining.sh
+```
+
+
+6️⃣ Keep SRBMiner Running in Background
+To keep mining active even after disconnecting:
+```bash
+screen -S srminer
+./start_mining.sh
+```
+- Detach: (Ctrl+A, then D).
+- Reattach anytime:
+```bash
+screen -r srminer
 ```
