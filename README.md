@@ -4,7 +4,8 @@ This guide will help you setup a multiminer on a rented Clore.Ai server. This wi
 # 🚀 Dual Mining Setup Guide (SHA3X + RandomX)
 
 ## **1️⃣ Rent & Access the Server**
-Choose a **GPU/CPU server** from **CloreAI or another provider**, then connect:
+Choose a **GPU/CPU server** from **CloreAI or another provider**
+Using Powershell connect to your rented server
 ```bash
 ssh root@<server_ip> -p <port>
 ```
@@ -15,6 +16,7 @@ ssh root@<server_ip> -p <port>
 apt update && apt upgrade -y
 apt install wget unzip git build-essential cmake libhwloc-dev libuv1-dev libssl-dev -y
 ```
+When prompted select "Use Existing SSH" option 2
 
 
 3️⃣ Download & Extract SRBMiner-MULT and Change Directory to SRB-Miner-2-8-8
