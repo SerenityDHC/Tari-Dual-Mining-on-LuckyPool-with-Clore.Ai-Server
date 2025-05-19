@@ -47,13 +47,14 @@ Then paste the edited version into the start_mining.sh file
 #!/bin/bash
 cd /root/SRBMiner-Multi-2-8-8
 
+# Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU (without huge pages)
 ./SRBMiner-MULTI \
   --algorithm sha3x \
   --pool tari.luckypool.io:6118 \
-  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC+482JA7j98r7MyuVCbJKXvnPQjtEaxurs535g3Y9FAWFAgh1W1UaS4t98qcnz1ihZF86dBYfKx5jYrJFmkLxZTvTg9wKBCxp \
+  --wallet <Tari Wallet Address.Worker Name> \
   --algorithm randomx \
-  --pool mine-tari-monero.luckypool.io:8118 \
-  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC+482JA7j98r7MyuVCbJKXvnPQjtEaxurs535g3Y9FAWFAgh1W1UaS4t98qcnz1ihZF86dBYfKx5jYrJFmkLxZTvTg9wKBCxp+MONERO_WALLET=500000.1039777 \
+  --pool mine-tari-monero.luckypool.io:443 \
+  --wallet <Monero Wallet Address=Difficulty.Workername> \
   --enable-cpu \
   --disable-huge-pages
 ```
