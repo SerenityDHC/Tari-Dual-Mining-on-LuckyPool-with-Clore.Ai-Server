@@ -57,6 +57,7 @@ cd /root/SRBMiner-Multi-2-8-8
   --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
 ```
 Save the file:
 - Press Ctrl + X (Exit nano)
