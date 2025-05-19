@@ -72,7 +72,6 @@ chmod +x start_mining.sh
 ```
 <br><br>
 
-
 6️⃣ Keep SRBMiner Running in Background
 To keep mining active even after disconnecting:
 ```bash
