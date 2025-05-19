@@ -11,7 +11,7 @@ Open Powershell to connect to your rented server<br>
 ```bash
 ssh root@<server_ip> -p <port>
 ```
-"*example: ssh root@n1.de.clorecloud.net -p 1219*"
+*example: ssh root/@n1.de.clorecloud.net -p 1219*
 <br>
 
 
