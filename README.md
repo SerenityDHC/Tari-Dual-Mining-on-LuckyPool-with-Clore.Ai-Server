@@ -4,7 +4,7 @@
 
 <br>
 1️⃣ Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr<br>
-Acess your newly rented server<br>
+<br><br>
 
 Open Powershell to connect to your rented server<br>
 **Replace <server_ip> and <port>**
