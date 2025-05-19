@@ -7,7 +7,7 @@ This guide will help you setup a multiminer on a rented Clore.Ai server. This wi
 Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr
 
 Open Powershell to connect to your rented server<br>
-**Replace Serever IP and Port**
+**Replace Server IP and Port**
 ```bash
 ssh root@<server_ip> -p <port>
 ```
