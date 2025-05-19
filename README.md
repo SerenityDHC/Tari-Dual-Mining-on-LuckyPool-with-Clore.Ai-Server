@@ -2,15 +2,14 @@
 
 **Install Tari Universe at home to create a Tari and Monero Wallet: https://airdrop.tari.com/download/8uJGPuK4jX**
 <br>
-<br>
 1️⃣ Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr<br>
 <br><br>
 
 Open Powershell to connect to your rented server<br>
-**Replace <server_ip> and <port>**
 ```bash
 ssh root@<server_ip> -p <port>
 ```
+**Replace <server_ip> and <port> with your server information**
 ```*example: ssh root@n1.de.clorecloud.net -p 1219*```
 <br>
 Type "YES" to accept SSH Fingerprint
