@@ -72,4 +72,13 @@ chmod +x start_mining.sh
 ```
 <br><br>
 
+**Check your mining status for each pool here:**
+<br>
+
+Tari: https://tari.luckypool.io/
+Use Tari Wallet Address
+<BR>
+Monero: https://tari-monero.luckypool.io/
+Use Tari+Monero Wallet Address
+
 
