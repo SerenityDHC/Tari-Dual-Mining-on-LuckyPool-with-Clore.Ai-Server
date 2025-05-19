@@ -1,9 +1,9 @@
 # Tari-Mining-with-Clore.AI
 This guide will help you setup a multiminer on a rented Clore.Ai server. This will mine on both Sha3 + RandomX.
 
-# 🚀 Dual Mining Setup Guide (SHA3X + RandomX)
+# 🚀 Dual Mining Setup Guide (SHA3X + RandomX)<br>
+Install Tari Universe to create a Tari and Monero Wallet: 
 
-#Install Tari Universe to create a Tari and Monero Wallet: 
 <br>
 1️⃣ Rent & Access the Server
 Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr
