@@ -1,4 +1,4 @@
-# 🚀 Tari Dual Mining Setup Guide for CLORE.AI (SHA3X + RandomX)<br>
+# 🚀 Tari Dual Mining Setup Guide on LuckyPool using a CLORE.AI Server<br>
 
 **Install Tari Universe at home to create a Tari and Monero Wallet: https://airdrop.tari.com/download/8uJGPuK4jX**
 <br>
