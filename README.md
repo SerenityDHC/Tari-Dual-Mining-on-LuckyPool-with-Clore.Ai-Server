@@ -1,14 +1,17 @@
 # Tari-Mining-with-Clore.AI
-This guide will help you setup a multiminer on a rented Clore.Ai server. This will mine on both Sha3 +  RandomX.
+This guide will help you setup a multiminer on a rented Clore.Ai server. This will mine on both Sha3 + RandomX.
 
 # 🚀 Dual Mining Setup Guide (SHA3X + RandomX)
 
-## **1️⃣ Rent & Access the Server**
-Choose a **GPU/CPU server** from **CloreAI or another provider**
-Using Powershell connect to your rented server
+## 1️⃣ Rent & Access the Server
+Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr
+
+Open Powershell to connect to your rented server
+Replace Serever IP and Port
 ```bash
 ssh root@<server_ip> -p <port>
 ```
+<br>
 
 
 2️⃣ Install Dependencie
@@ -17,6 +20,7 @@ apt update && apt upgrade -y
 apt install wget unzip git build-essential cmake libhwloc-dev libuv1-dev libssl-dev -y
 ```
 When prompted select "Use Existing SSH" option 2
+<br>
 
 
 3️⃣ Download & Extract SRBMiner-MULT and Change Directory to SRB-Miner-2-8-8
@@ -25,6 +29,7 @@ wget -O SRBMiner-MULTI.tar.gz https://github.com/doktor83/SRBMiner-Multi/release
 tar -xzvf SRBMiner-MULTI.tar.gz
 cd SRBMiner-Multi-2-8-8
 ```
+<br>
 
 
 4️⃣ Create Startup Script
@@ -41,6 +46,7 @@ Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
+<br>
 
 
 5️⃣ Make the Script Executable & Start Mining
@@ -48,6 +54,7 @@ Save the file:
 chmod +x start_mining.sh
 ./start_mining.sh
 ```
+<br>
 
 
 6️⃣ Keep SRBMiner Running in Background
