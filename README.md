@@ -44,8 +44,9 @@ Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WAL
 
 Then paste the edited version into the start_mining.sh file
 ```bash
-#!/bin/bash
-cd /root/SRBMiner-Multi-2-8-8
+# Get total available CPU threads dynamically
+TOTAL_THREADS=$(nproc)
+CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available threads
 
 # Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU (without huge pages)
 ./SRBMiner-MULTI \
@@ -56,7 +57,9 @@ cd /root/SRBMiner-Multi-2-8-8
   --pool mine-tari-monero.luckypool.io:8118 \
   --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
   --enable-cpu \
-  --disable-huge-pages
+  --disable-huge-pages \
+  --cpu-threads $CPU_THREADS \
+  --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log
 ```
 Save the file:
