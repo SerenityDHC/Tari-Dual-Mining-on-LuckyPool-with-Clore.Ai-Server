@@ -7,7 +7,7 @@ This guide will help you setup a multiminer on a rented Clore.Ai server. This wi
 Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr
 
 Open Powershell to connect to your rented server<br>
-**Replace Server IP and Port**
+**Replace <server_ip> and <port>**
 ```bash
 ssh root@<server_ip> -p <port>
 ```
@@ -37,12 +37,12 @@ cd SRBMiner-Multi-2-8-8
 ```bash
 nano start_mining.sh
 ```
-Copy this code into notepad and replace TARI_WALLET, MONERO_WALLET and DIFF.WORKERNAME.
+Copy this code into notepad and replace <TARI_WALLET>, <MONERO_WALLET=DIFF.WORKERNAME> with wallets listed on Tari Universe
 Then paste the edited version into the start_mining.sh file
 ```bash
 #!/bin/bash
 cd /root/SRBMiner-Multi-2-8-8
-./SRBMiner-MULTI --algorithm sha3x --pool tari.luckypool.io:6118 --wallet TARI_WALLET+MONERO_WALLET=DIFF.WORKERNAME --algorithm randomx --pool mine-tari-monero.luckypool.io:8118 --enable-cpu --disable-huge-pages
+./SRBMiner-MULTI --algorithm sha3x --pool tari.luckypool.io:6118 --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKERNAME> --algorithm randomx --pool mine-tari-monero.luckypool.io:8118 --enable-cpu --disable-huge-pages
 ```
 Save the file:
 - Press Ctrl + X (Exit nano)
