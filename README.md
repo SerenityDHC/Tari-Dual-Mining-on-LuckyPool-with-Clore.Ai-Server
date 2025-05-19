@@ -12,7 +12,7 @@ Open Powershell to connect to your rented server<br>
 ssh root@<server_ip> -p <port>
 ```
 ```*example: ssh root@n1.de.clorecloud.net -p 1219*```
-<br>
+<br><br>
 
 
 2️⃣ Install Dependencie
@@ -21,7 +21,7 @@ apt update && apt upgrade -y
 apt install wget unzip git build-essential cmake libhwloc-dev libuv1-dev libssl-dev -y
 ```
 When prompted select "Use Existing SSH" option 2
-<br>
+<br><br>
 
 
 3️⃣ Download & Extract SRBMiner-MULT and Change Directory to SRB-Miner-2-8-8
@@ -30,7 +30,7 @@ wget -O SRBMiner-MULTI.tar.gz https://github.com/doktor83/SRBMiner-Multi/release
 tar -xzvf SRBMiner-MULTI.tar.gz
 cd SRBMiner-Multi-2-8-8
 ```
-<br>
+<br><br>
 
 
 4️⃣ Create Startup Script
@@ -47,7 +47,7 @@ Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
-<br>
+<br><br>
 
 
 5️⃣ Make the Script Executable & Start Mining
@@ -55,7 +55,7 @@ Save the file:
 chmod +x start_mining.sh
 ./start_mining.sh
 ```
-<br>
+<br><br>
 
 
 6️⃣ Keep SRBMiner Running in Background
