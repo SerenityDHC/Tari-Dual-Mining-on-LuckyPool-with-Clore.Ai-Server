@@ -3,7 +3,7 @@ This guide will help you setup a multiminer on a rented Clore.Ai server. This wi
 
 # 🚀 Dual Mining Setup Guide (SHA3X + RandomX)
 
-## 1️⃣ Rent & Access the Server
+1️⃣ Rent & Access the Server
 Rent a GPU/CPU server from CloreAI: https://clore.ai?ref_id=5dw6bmhr
 
 Open Powershell to connect to your rented server<br>
