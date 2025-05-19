@@ -37,7 +37,8 @@ cd SRBMiner-Multi-2-8-8
 ```bash
 nano start_mining.sh
 ```
-Replace Tari wallet address, Monerao wallet address and Miner names.
+Copy this code into notepad and replace TARI_WALLET, MONERO_WALLET and DIFF.WORKERNAME.
+Then paste the edited version into the start_mining.sh file
 ```bash
 #!/bin/bash
 cd /root/SRBMiner-Multi-2-8-8
