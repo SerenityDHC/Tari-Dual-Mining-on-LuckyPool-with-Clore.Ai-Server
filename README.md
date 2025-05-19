@@ -1,8 +1,6 @@
-# Tari-Mining-with-Clore.AI
-This guide will help you setup a multiminer on a rented Clore.Ai server. This will mine on both Sha3 + RandomX.
+# 🚀 Tari Dual Mining Setup Guide for CLORE.AI (SHA3X + RandomX)<br>
 
-# 🚀 Dual Mining Setup Guide (SHA3X + RandomX)<br>
-# Install Tari Universe to create a Tari and Monero Wallet: 
+# Install Tari Universe at home to create a Tari and Monero Wallet: 
 
 <br>
 1️⃣ Rent & Access the Server
@@ -14,6 +12,10 @@ Open Powershell to connect to your rented server<br>
 ssh root@<server_ip> -p <port>
 ```
 ```*example: ssh root@n1.de.clorecloud.net -p 1219*```
+<br>
+Type "YES" to accept SSH Fingerprint
+<br>
+Enter SSH Password
 <br><br>
 
 
