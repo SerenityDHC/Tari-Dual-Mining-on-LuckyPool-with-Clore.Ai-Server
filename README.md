@@ -1,6 +1,6 @@
 # 🚀 Tari Dual Mining Setup Guide for CLORE.AI (SHA3X + RandomX)<br>
 
-# Install Tari Universe at home to create a Tari and Monero Wallet: 
+# Install Tari Universe at home to create a Tari and Monero Wallet: https://airdrop.tari.com/download/8uJGPuK4jX
 
 <br>
 1️⃣ Rent & Access the Server
