@@ -34,11 +34,9 @@ tar -xzvf SRBMiner-MULTI.tar.gz
 cd SRBMiner-Multi-2-8-8
 ```
 <br><br>
-<br>
 
-***
- # ⚒ Choose Your Mining Setup<br>
-***
+ # ***⚒ Choose Your Mining Setup*** <br>
+
 Option 1: Mines both CPU & GPU in a single instance ~ Simpler setup, but if an issue occurs, mining stops entirely.<br>
 Option 2: Runs CPU and GPU mining separately ~ Slightly more setup, but allows independent operation to prevent full downtime if one fails.
 
