@@ -132,10 +132,10 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
 ./SRBMiner-MULTI \
   --algorithm sha3x \
   --pool tari.luckypool.io:6118 \
-  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC.1040060-5x5080 \
+  --wallet <TARI_WALLET>.<WORKER_NAME> \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
-  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC+482JA7j98r7MyuVCbJKXvnPQjtEaxurs535g3Y9FAWFAgh1W1UaS4t98qcnz1ihZF86dBYfKx5jYrJFmkLxZTvTg9wKBCxp=500000.1040060 \
+  --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
   --cpu-threads $CPU_THREADS \
