@@ -152,6 +152,31 @@ Save the file:
 ```
 chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
+<br><br>
+2️⃣🅲 Start GPU Mining
+```
+./start_gpu_mining.sh
+```
+<br><br>
+2️⃣🅳
+Open a Second PowerShell Tab with same Login Information
+```bash
+ssh root@<server_ip> -p <port#>
+```
+<br>
+Enter SSH Password
+<br><br>
+
+2️⃣🅴
+Change Directory to SRBMiner
+```
+cd SRBMiner-Multi-2-8-8
+```
+<br><br>
+2️⃣🅵 Start CPU Miner
+```
+./start_cpu_mining.sh
+```
 
 
 **Check your mining status for each pool:**
