@@ -130,9 +130,6 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
 
 # Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU
 ./SRBMiner-MULTI \
-  --algorithm sha3x \
-  --pool tari.luckypool.io:6118 \
-  --wallet <TARI_WALLET>.<WORKER_NAME> \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
   --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
