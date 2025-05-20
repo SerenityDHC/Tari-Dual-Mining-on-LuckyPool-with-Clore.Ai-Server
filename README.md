@@ -47,7 +47,7 @@ Option 2: Runs CPU and GPU mining separately ~ Slightly more setup, but allows i
 
 
 # OPTION 1
-4️⃣ Create Startup Script
+1️⃣A   Create Startup Script
 ```bash
 nano start_mining.sh
 ```
@@ -80,12 +80,73 @@ Save the file:
 <br><br>
 
 
-5️⃣ Make the Script Executable & Start Mining
+1️⃣B Make the Script Executable
 ```bash
 chmod +x start_mining.sh
-./start_mining.sh
 ```
 <br><br>
+
+1️⃣C Start Mining
+```
+./start_mining.sh
+```
+
+<br><br>
+
+# OPTION 2
+2️⃣🅰️   Create GPU Mining Startup Script
+```bash
+nano start_gpu_mining.sh
+```
+Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+
+Then paste the edited version into the start_gpu_mining.sh file
+```
+#!/bin/bash
+
+# Start SRBMiner with SHA3X (Tari) on GPU
+./SRBMiner-MULTI \
+  --algorithm sha3x \
+  --pool tari.luckypool.io:6118 \
+  --wallet <TARI_WALLET>.<WORKER_NAME> \
+  --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log
+```
+Save the file:
+- Press Ctrl + X (Exit nano)
+- Press Y (Confirm save changes)
+- Press Enter (Save the file with the same name)
+<br><br>
+2️⃣🅱️   Create CPU Mining Startup Script
+```bash
+nano start_cpu_mining.sh
+```
+Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+
+Then paste the edited version into the start_gpu_mining.sh file
+```
+TOTAL_THREADS=$(nproc)
+CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Set exactly 95% of available threads
+
+# Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU
+./SRBMiner-MULTI \
+  --algorithm sha3x \
+  --pool tari.luckypool.io:6118 \
+  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC.1040060-5x5080 \
+  --algorithm randomx \
+  --pool mine-tari-monero.luckypool.io:8118 \
+  --wallet 122fAGPkVujExoZmJGnTRPQM9iARdR7hDoQ8xmPuDa1Yr8Hko3EiWjARENYhLBHbGpXBdRpFthcMALY1RFbBAMjaPpC+482JA7j98r7MyuVCbJKXvnPQjtEaxurs535g3Y9FAWFAgh1W1UaS4t98qcnz1ihZF86dBYfKx5jYrJFmkLxZTvTg9wKBCxp=500000.1040060 \
+  --enable-cpu \
+  --disable-huge-pages \
+  --cpu-threads $CPU_THREADS \
+  --disable-msr-tweaks \
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
+```
+Save the file:
+- Press Ctrl + X (Exit nano)
+- Press Y (Confirm save changes)
+- Press Enter (Save the file with the same name)
+<br><br>
+
 
 **Check your mining status for each pool:**
 <br>
