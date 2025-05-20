@@ -94,7 +94,7 @@ chmod +x start_mining.sh
 <br><br>
 
 # OPTION 2
-2️⃣🅰️   Create GPU Mining Startup Script
+2️⃣🅰  Create GPU Mining Startup Script
 ```bash
 nano start_gpu_mining.sh
 ```
@@ -116,7 +116,7 @@ Save the file:
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
 <br><br>
-2️⃣🅱️   Create CPU Mining Startup Script
+2️⃣🅱  Create CPU Mining Startup Script
 ```bash
 nano start_cpu_mining.sh
 ```
