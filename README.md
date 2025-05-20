@@ -39,9 +39,10 @@ cd SRBMiner-Multi-2-8-8
  Option 1: Mines both CPU & GPU in a single instance—simpler setup, but if an issue occurs, mining stops entirely.<br>
  Option 2: Runs CPU and GPU mining separately—slightly more setup, but allows independent operation to prevent full downtime if one fails.
 ---
+<br><br>
 
 
-OPTION 1
+# OPTION 1
 4️⃣ Create Startup Script
 ```bash
 nano start_mining.sh
