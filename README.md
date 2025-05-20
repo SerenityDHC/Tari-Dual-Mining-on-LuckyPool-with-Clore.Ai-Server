@@ -94,7 +94,7 @@ chmod +x start_mining.sh
 <br><br>
 
 # OPTION 2
-2️⃣🅰  Create GPU Mining Startup Script
+2️⃣A Create GPU Mining Startup Script
 ```bash
 nano start_gpu_mining.sh
 ```
@@ -116,7 +116,7 @@ Save the file:
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
 <br><br>
-2️⃣🅱  Create CPU Mining Startup Script
+2️⃣B Create CPU Mining Startup Script
 ```bash
 nano start_cpu_mining.sh
 ```
@@ -148,17 +148,17 @@ Save the file:
 - Press Enter (Save the file with the same name)
 <br><br>
 
-2️⃣🅲️Make both files executable
+2️⃣C  Make both files executable
 ```
 chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
 <br><br>
-2️⃣🅲 Start GPU Mining
+2️⃣D Start GPU Mining
 ```
 ./start_gpu_mining.sh
 ```
 <br><br>
-2️⃣🅳
+2️⃣E
 Open a Second PowerShell Tab with same Login Information
 ```bash
 ssh root@<server_ip> -p <port#>
@@ -167,13 +167,13 @@ ssh root@<server_ip> -p <port#>
 Enter SSH Password
 <br><br>
 
-2️⃣🅴
+2️⃣F
 Change Directory to SRBMiner
 ```
 cd SRBMiner-Multi-2-8-8
 ```
 <br><br>
-2️⃣🅵 Start CPU Miner
+2️⃣G Start CPU Miner
 ```
 ./start_cpu_mining.sh
 ```
