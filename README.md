@@ -36,8 +36,8 @@ cd SRBMiner-Multi-2-8-8
 <br><br>
 
 # ⚒️ Choose Your Mining Setup
-Option 1: Mines both CPU & GPU in a single instance—simpler setup, but if an issue occurs, mining stops entirely.<br>
-Option 2: Runs CPU and GPU mining separately—slightly more setup, but allows independent operation to prevent full downtime if one fails.
+# Option 1: Mines both CPU & GPU in a single instance—simpler setup, but if an issue occurs, mining stops entirely.<br>
+# Option 2: Runs CPU and GPU mining separately—slightly more setup, but allows independent operation to prevent full downtime if one fails.
 
 
 OPTION 1
