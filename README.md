@@ -159,7 +159,8 @@ chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
 <br><br>
 2️⃣E
-Open a Second PowerShell Tab with same Login Information
+Open a Second PowerShell Tab 
+Log in with same information
 ```bash
 ssh root@<server_ip> -p <port#>
 ```
