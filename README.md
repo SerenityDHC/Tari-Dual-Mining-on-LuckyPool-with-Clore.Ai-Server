@@ -120,12 +120,13 @@ Save the file:
 ```bash
 nano start_cpu_mining.sh
 ```
+<br><br>
 Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 
 Then paste the edited version into the start_gpu_mining.sh file
 ```
 TOTAL_THREADS=$(nproc)
-CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Set exactly 95% of available threads
+CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available threads
 
 # Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU
 ./SRBMiner-MULTI \
@@ -146,6 +147,11 @@ Save the file:
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
 <br><br>
+
+2️⃣🅲Make both files executable
+```
+chmod +x start_cpu_mining.sh start_gpu_mining.sh
+```
 
 
 **Check your mining status for each pool:**
