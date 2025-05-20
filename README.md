@@ -148,7 +148,7 @@ Save the file:
 - Press Enter (Save the file with the same name)
 <br><br>
 
-2️⃣🅲Make both files executable
+2️⃣🅲️Make both files executable
 ```
 chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
