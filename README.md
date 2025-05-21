@@ -74,7 +74,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
  ```
 Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
-Difficulty <DIFF> based on CPU power, average 50000-100000<br> 
+**DIFF**= Difficulty based on CPU power, average 50000-100000<br> 
 Replace <POOL> with closest GPU mining server:<br>
 France: 	  tari.luckypool.io<br>
 Canada:    ca.luckypool.io<br>
@@ -159,7 +159,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
  ```
 Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 <WORKER_NAME> can be anything to identify worker<br>
-Difficulty <DIFF> based on CPU power, average 50000-100000<br> 
+**DIFF**= Difficulty based on CPU power, average 50000-100000<br> 
 
 
 
@@ -213,12 +213,5 @@ Monero (RandomX): https://tari-monero.luckypool.io/<BR>
 Use Tari+Monero Wallet Address
 
 
-## Configuration Parameters
-- `<DIFF>`: Mining difficulty, typically between **50,000 - 100,000**, depending on CPU power.
-- `<POOL>`: Closest GPU mining server, replace with the appropriate pool URL.
-France:    	tari.luckypool.io<br>
-Canada:     ca.luckypool.io<br>
-Singapore:  sg.luckypool.io  <br>
-Poland:     pl-eu.luckypool.io<br>
-Germany:    de-eu.luckypool.io<br><br>
+
 
