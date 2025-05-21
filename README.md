@@ -10,7 +10,7 @@ Open Powershell to connect to your rented server<br>
 ssh root@<server_ip> -p <port#>
 ```
 **Replace <server_ip> and <port#> with your server information**<br>
-```*example: ssh root@n1.de.clorecloud.net -p 1219*```
+```example: ssh root@n1.de.clorecloud.net -p 1219```
 <br>
 Type "YES" to accept SSH Fingerprint
 <br>
