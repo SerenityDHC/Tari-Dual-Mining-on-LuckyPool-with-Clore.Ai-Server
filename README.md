@@ -51,9 +51,7 @@ Option 2: Runs CPU and GPU mining separately ~ Slightly more setup, but allows i
 ```bash
 nano start_mining.sh
 ```
-Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
-Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
-Then paste the edited version into the start_mining.sh file
+Copy this code into notepad
 ```
 #!/bin/bash
 # Get total available CPU threads dynamically
@@ -63,7 +61,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
 # Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU (without huge pages)
 ./SRBMiner-MULTI \
   --algorithm sha3x \
-  --pool tari.luckypool.io:6118 \
+  --pool <POOL>:6118 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
@@ -74,6 +72,16 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
  ```
+Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
+Replace <POOL> with closest server:<br>
+France: 	tari.luckypool.io<br>
+Canada:  ca.luckypool.io<br>
+Singapore:  	sg.luckypool.io  <br>
+Poland:    pl-eu.luckypool.io<br>
+Germany:  de-eu.luckypool.io<br><br>
+
+Paste the edited notepad version into the start_mining.sh file<br>
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
