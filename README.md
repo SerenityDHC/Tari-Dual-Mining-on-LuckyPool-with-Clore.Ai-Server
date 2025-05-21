@@ -52,7 +52,7 @@ Option 2: Runs CPU and GPU mining separately ~ Slightly more setup, but allows i
 nano start_mining.sh
 ```
 Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
-
+Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
 Then paste the edited version into the start_mining.sh file
 ```bash
 # Get total available CPU threads dynamically
@@ -156,7 +156,7 @@ chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
 <br><br>
 2️⃣E
-Open a Second PowerShell Tab 
+Open a Second PowerShell Tab<br> 
 Log in with same information
 ```bash
 ssh root@<server_ip> -p <port#>
