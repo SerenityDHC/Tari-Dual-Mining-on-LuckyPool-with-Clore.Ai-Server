@@ -73,8 +73,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --cpu-threads $CPU_THREADS \
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
-  --max-no-share-sent 300
-```
+ ```
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
@@ -111,8 +110,7 @@ Then paste the edited version into the start_gpu_mining.sh file
   --pool tari.luckypool.io:6118 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
-  --max-no-share-sent 300
-```
+ ```
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
@@ -141,8 +139,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
   --cpu-threads $CPU_THREADS \
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
-  --max-no-share-sent 300
-```
+ ```
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
