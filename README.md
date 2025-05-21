@@ -74,12 +74,13 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
  ```
 Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
+<DIFF> Difficulty based on CPU power, average 50000-100000<br> 
 Replace <POOL> with closest server:<br>
-France: 	tari.luckypool.io<br>
-Canada:  ca.luckypool.io<br>
-Singapore:  	sg.luckypool.io  <br>
+France: 	  tari.luckypool.io<br>
+Canada:    ca.luckypool.io<br>
+Singapore: sg.luckypool.io  <br>
 Poland:    pl-eu.luckypool.io<br>
-Germany:  de-eu.luckypool.io<br><br>
+Germany:   de-eu.luckypool.io<br><br>
 
 Paste the edited notepad version into the start_mining.sh file<br>
 Save the file:
@@ -107,18 +108,26 @@ chmod +x start_mining.sh
 ```bash
 nano start_gpu_mining.sh
 ```
-Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
-
-Then paste the edited version into the start_gpu_mining.sh file
+Copy this code into notepad 
 ```
 #!/bin/bash
 # Start SRBMiner with SHA3X (Tari) on GPU
 ./SRBMiner-MULTI \
   --algorithm sha3x \
-  --pool tari.luckypool.io:6118 \
+  --pool <POOL>.io:6118 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
  ```
+Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+Replace <POOL> with closest server:<br>
+France:    	tari.luckypool.io<br>
+Canada:     ca.luckypool.io<br>
+Singapore:  sg.luckypool.io  <br>
+Poland:     pl-eu.luckypool.io<br>
+Germany:    de-eu.luckypool.io<br><br>
+
+Paste the edited notepad version into the start_gpu_mining.sh file
+
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
@@ -129,7 +138,7 @@ Save the file:
 nano start_cpu_mining.sh
 ```
 <br><br>
-Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+Copy this code into notepad 
 
 Then paste the edited version into the start_gpu_mining.sh file
 ```
@@ -148,6 +157,14 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
  ```
+Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
+<WORKER_NAME> can be anything to identify worker<br>
+<DIFF> Difficulty based on CPU power, average 50000-100000<br> 
+
+
+
+Paste the edited version into the start_gpu_mining.sh file<br>
+
 Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
