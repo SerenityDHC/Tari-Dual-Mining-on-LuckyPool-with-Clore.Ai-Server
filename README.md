@@ -65,7 +65,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
-  --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
+  --wallet <TARI_WALLET>+<MONERO_WALLET=200000.WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
   --cpu-threads $CPU_THREADS \
@@ -74,8 +74,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
  ```
 Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets on Tari Universe<br>
 Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
-**DIFF**= Difficulty based on CPU power, average 50000-100000<br> 
-Replace <POOL> with closest GPU mining server:<br>
+Replace **POOL** with closest GPU mining server:<br>
 France: 	  tari.luckypool.io<br>
 Canada:    ca.luckypool.io<br>
 Singapore: sg.luckypool.io  <br>
@@ -150,7 +149,7 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
 ./SRBMiner-MULTI \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
-  --wallet <TARI_WALLET>+<MONERO_WALLET=DIFF.WORKER_NAME> \
+  --wallet <TARI_WALLET>+<MONERO_WALLET=200000.WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
   --cpu-threads $CPU_THREADS \
@@ -159,9 +158,6 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
  ```
 Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets on Tari Universe<br>
 <WORKER_NAME> can be anything to identify worker<br>
-**DIFF**= Difficulty based on CPU power, average 50000-100000<br> 
-
-
 
 Paste the edited version into the start_gpu_mining.sh file<br>
 
