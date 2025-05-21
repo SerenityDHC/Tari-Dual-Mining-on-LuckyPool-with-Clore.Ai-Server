@@ -72,7 +72,8 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
  ```
-Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET> and <WORKER_NAME> with wallets on Tari Universe<br>
+Replace <TARI_WALLET> and <MONERO_WALLET> with wallets on Tari Universe<br>
+Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
 Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
 Replace **POOL** with closest GPU mining server:<br>
 France: 	  tari.luckypool.io<br>
@@ -117,7 +118,8 @@ Copy this code into notepad
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
  ```
-Replace <TARI_WALLET>,<WORKER_NAME> with wallets on Tari Universe<br>
+Replace <TARI_WALLET> with wallets on Tari Universe<br>
+Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
 Replace <POOL> with closest GPU mining server:<br>
 France:    	tari.luckypool.io<br>
 Canada:     ca.luckypool.io<br>
@@ -156,9 +158,9 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
  ```
-Replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET> and <WORKER_NAME> with wallets on Tari Universe<br>
-<WORKER_NAME> can be anything to identify worker<br>
-
+Replace <TARI_WALLET> and <MONERO_WALLET> with wallets on Tari Universe<br>
+Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
+<br>
 Paste the edited version into the start_gpu_mining.sh file<br>
 
 Save the file:
