@@ -54,7 +54,8 @@ nano start_mining.sh
 Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WALLET=DIFF.WORKER_NAME> with wallets listed on Tari Universe<br>
 Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
 Then paste the edited version into the start_mining.sh file
-```bash
+```
+#!/bin/bash
 # Get total available CPU threads dynamically
 TOTAL_THREADS=$(nproc)
 CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available threads
@@ -125,6 +126,7 @@ Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WAL
 
 Then paste the edited version into the start_gpu_mining.sh file
 ```
+#!/bin/bash
 TOTAL_THREADS=$(nproc)
 CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available threads
 
