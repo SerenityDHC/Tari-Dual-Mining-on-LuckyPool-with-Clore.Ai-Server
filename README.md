@@ -56,7 +56,6 @@ Adjust CPU thread usage if desired, currently using 95% of CPU threads.<br>
 Then paste the edited version into the start_mining.sh file
 ```
 #!/bin/bash
-
 # Get total available CPU threads dynamically
 TOTAL_THREADS=$(nproc)
 CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available threads
@@ -73,7 +72,8 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --disable-huge-pages \
   --cpu-threads $CPU_THREADS \
   --disable-msr-tweaks \
-  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
+  --max-no-share-sent 300
 ```
 Save the file:
 - Press Ctrl + X (Exit nano)
@@ -105,13 +105,13 @@ Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WAL
 Then paste the edited version into the start_gpu_mining.sh file
 ```
 #!/bin/bash
-
 # Start SRBMiner with SHA3X (Tari) on GPU
 ./SRBMiner-MULTI \
   --algorithm sha3x \
   --pool tari.luckypool.io:6118 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
-  --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log
+  --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
+  --max-no-share-sent 300
 ```
 Save the file:
 - Press Ctrl + X (Exit nano)
@@ -128,7 +128,6 @@ Copy this code into notepad and replace <TARI_WALLET>,<WORKER_NAME>, <MONERO_WAL
 Then paste the edited version into the start_gpu_mining.sh file
 ```
 #!/bin/bash
-
 TOTAL_THREADS=$(nproc)
 CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available threads
 
@@ -141,7 +140,8 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available thr
   --disable-huge-pages \
   --cpu-threads $CPU_THREADS \
   --disable-msr-tweaks \
-  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
+  --max-no-share-sent 300
 ```
 Save the file:
 - Press Ctrl + X (Exit nano)
