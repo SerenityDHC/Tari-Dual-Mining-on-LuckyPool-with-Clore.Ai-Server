@@ -114,7 +114,7 @@ Copy this code into notepad
 # Start SRBMiner with SHA3X (Tari) on GPU
 ./SRBMiner-MULTI \
   --algorithm sha3x \
-  --pool <POOL>.io:6118 \
+  --pool <POOL>:6118 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
  ```
