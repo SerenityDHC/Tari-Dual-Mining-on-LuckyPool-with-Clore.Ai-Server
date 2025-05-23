@@ -22,6 +22,7 @@ Enter SSH Password
 ```bash
 apt update && apt upgrade -y
 apt install wget unzip git build-essential cmake libhwloc-dev libuv1-dev libssl-dev -y
+apt --fix-broken install
 ```
 When prompted select "Keep the local version" option 2
 <br><br>
