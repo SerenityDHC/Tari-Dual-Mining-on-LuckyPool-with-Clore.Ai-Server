@@ -39,8 +39,8 @@ cd SRBMiner-Multi-2-8-8
  # ***⚒ Choose Your Mining Setup*** <br>
 
 Option 1: Mines both CPU & GPU in a single instance on LuckyPool ~ Simpler setup, but if an issue occurs, mining stops entirely.<br>
-Option 2: Runs CPU and GPU mining separately on LuckyPool~ Slightly more setup, but allows independent operation to prevent full downtime if one fails.
-Option 3: Runs GPU mining on LuckyPool and CPU Mining on the New Hard Fork Hatchling Pool at Jagtech.io
+Option 2: Runs CPU and GPU mining separately on LuckyPool~ Slightly more setup, but allows independent operation.
+Option 3: Runs GPU mining on LuckyPool and CPU Mining on the New Hard Fork Hatchling Pool at Jagtech.io with indendent GPU and CPU mining instances.
 
 <br><br>
 
@@ -251,6 +251,7 @@ Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
+<br><br>
 <br><br>
 3️⃣B Create CPU Mining Startup Script
 ```bash
