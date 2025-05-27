@@ -1,4 +1,4 @@
-# 🚀 Tari Dual Mining Setup Guide on LuckyPool using a CLORE.AI Server<br>
+# 🚀 Tari Mining Setup Guide on LuckyPool + Hard Fork Hatchling Pool using rented a CLORE.AI Server<br>
 
 **Install Tari Universe at home to create a Tari and Monero Wallet: https://airdrop.tari.com/download/8uJGPuK4jX**
 <br>
@@ -38,8 +38,9 @@ cd SRBMiner-Multi-2-8-8
 
  # ***⚒ Choose Your Mining Setup*** <br>
 
-Option 1: Mines both CPU & GPU in a single instance ~ Simpler setup, but if an issue occurs, mining stops entirely.<br>
-Option 2: Runs CPU and GPU mining separately ~ Slightly more setup, but allows independent operation to prevent full downtime if one fails.
+Option 1: Mines both CPU & GPU in a single instance on LuckyPool ~ Simpler setup, but if an issue occurs, mining stops entirely.<br>
+Option 2: Runs CPU and GPU mining separately on LuckyPool~ Slightly more setup, but allows independent operation to prevent full downtime if one fails.
+Option 3: Runs GPU mining on LuckyPool and CPU Mining on the New Hard Fork Hatchling Pool at Jagtech.io
 
 <br><br>
 
@@ -142,7 +143,7 @@ nano start_cpu_mining.sh
 <br><br>
 Copy this code into notepad 
 
-Then paste the edited version into the start_gpu_mining.sh file
+Then paste the edited version into the start_cpu_mining.sh file
 ```
 #!/bin/bash
 TOTAL_THREADS=$(nproc)
@@ -201,6 +202,105 @@ cd SRBMiner-Multi-2-8-8
 ./start_cpu_mining.sh
 ```
 
+# OPTION 3
+2️⃣A Create GPU Mining Startup Script
+```bash
+nano start_gpu_mining.sh
+```
+Copy this code into notepad 
+```
+#!/bin/bash
+# Start SRBMiner with SHA3X (Tari) on GPU
+./SRBMiner-MULTI \
+  --algorithm sha3x \
+  --pool <POOL>:6118 \
+  --wallet <TARI_WALLET>.<WORKER_NAME> \
+  --log-file /root/SRBMiner-Multi-2-8-8/gpu_debug.log \
+ ```
+Replace <TARI_WALLET> with wallets on Tari Universe<br>
+Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
+Replace <POOL> with closest GPU mining server:<br>
+France:    	tari.luckypool.io<br>
+Canada:     ca.luckypool.io<br>
+Singapore:  sg.luckypool.io  <br>
+Poland:     pl-eu.luckypool.io<br>
+Germany:    de-eu.luckypool.io<br><br>
+
+Paste the edited notepad version into the start_gpu_mining.sh file
+
+Save the file:
+- Press Ctrl + X (Exit nano)
+- Press Y (Confirm save changes)
+- Press Enter (Save the file with the same name)
+<br><br>
+2️⃣B Create CPU Mining Startup Script
+```bash
+nano start_cpu_mining.sh
+```
+<br><br>
+Copy this code into notepad 
+
+Then paste the edited version into the start_cpu_mining.sh file
+```
+#!/bin/bash
+# Get total available CPU threads dynamically
+TOTAL_THREADS=$(nproc)
+CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Set exactly 95% of available threads
+
+# Start SRBMiner with RandomX (Tari) on CPU
+./SRBMiner-MULTI \
+  --algorithm randomx \
+  --pool hatchlings.rxpool.net:3333 \
+  --wallet <TARI_WALLET>.<WORKER_NAME> \
+  --enable-cpu \
+  --disable-huge-pages \
+  --cpu-threads $CPU_THREADS \
+  --disable-msr-tweaks \
+  --log-file /root/SRBMiner-Multi-2-8-8/cpu_debug.log
+ ```
+Replace <TARI_WALLET> with wallets on Tari Universe<br>
+Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
+<br>
+Paste the edited version into the start_cpu_mining.sh file<br>
+
+Save the file:
+- Press Ctrl + X (Exit nano)
+- Press Y (Confirm save changes)
+- Press Enter (Save the file with the same name)
+<br><br>
+
+2️⃣C  Make both files executable
+```
+chmod +x start_cpu_mining.sh start_gpu_mining.sh
+```
+<br><br>
+2️⃣D Start GPU Mining
+```
+./start_gpu_mining.sh
+```
+<br><br>
+2️⃣E
+Open a Second PowerShell Tab<br> 
+Log in with same information
+```bash
+ssh root@<server_ip> -p <port#>
+```
+<br>
+Enter SSH Password
+<br><br>
+
+2️⃣F
+Change Directory to SRBMiner
+```
+cd SRBMiner-Multi-2-8-8
+```
+<br><br>
+2️⃣G Start CPU Miner
+```
+./start_cpu_mining.sh
+```
+
+
 
 **Check your mining status for each pool:**
 <br>
@@ -210,6 +310,9 @@ Use Tari Wallet Address
 <BR><BR>
 Monero (RandomX): https://tari-monero.luckypool.io/<BR>
 Use Tari+Monero Wallet Address
+<BR><BR>
+Hatchlings Pool (RandomX: https://pool.rxt.tari.jagtech.io/
+Use Tari Wallet Address
 
 
 
