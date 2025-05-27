@@ -220,7 +220,7 @@ cd SRBMiner-Multi-2-8-8
 ```
 ./start_cpu_mining.sh
 ```
-
+<br><br>
 # OPTION 3
 3️⃣A Create GPU Mining Startup Script
 ```bash
