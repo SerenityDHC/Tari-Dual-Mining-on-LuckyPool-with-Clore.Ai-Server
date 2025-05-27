@@ -251,8 +251,10 @@ Save the file:
 - Press Ctrl + X (Exit nano)
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
-<br><br>
-<br><br>
+<br>
+<br>
+<br>
+<br>
 3️⃣B Create CPU Mining Startup Script
 ```bash
 nano start_cpu_mining.sh
