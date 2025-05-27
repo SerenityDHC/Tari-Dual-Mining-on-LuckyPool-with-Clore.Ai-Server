@@ -38,9 +38,9 @@ cd SRBMiner-Multi-2-8-8
 
  # ***⚒ Choose Your Mining Setup*** <br>
 
-Option 1: Mines both CPU & GPU in a single instance on LuckyPool ~ Easier setup, but if an issue occurs, mining stops entirely.<br>
-Option 2: Runs CPU and GPU mining separately on LuckyPool~ Slightly more setup, allows independent GPU and CPU mining instances.<br>
-Option 3: Runs GPU mining on LuckyPool and CPU Mining on the New Hatchling Pool at Jagtech.io, indendent GPU and CPU mining instances.<br>
+Option 1: Mines both CPU & GPU in a single instance on LuckyPool with Monero Merge Mining ~ Easier setup, but if an issue occurs, mining stops entirely.<br>
+Option 2: Runs CPU and GPU mining separately on LuckyPool with Monero Merge Mining Pool~ Slightly more setup, allows independent GPU and CPU mining instances.<br>
+Option 3: Runs GPU mining on LuckyPool and CPU Mining on New Hatchling Pool at Jagtech.io, indendent GPU and CPU mining instances.<br>
 
 <br><br>
 
