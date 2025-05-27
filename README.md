@@ -56,11 +56,20 @@ nano start_mining.sh
 Copy this code into notepad
 ```
 #!/bin/bash
+
 # Get total available CPU threads dynamically
 TOTAL_THREADS=$(nproc)
-CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available threads
 
-# Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU (without huge pages)
+# Detect NUMA nodes dynamically
+NUMA_NODES=$(lscpu | grep "NUMA node(s)" | awk '{print $NF}')
+
+# Set optimized CPU usage (90%)
+OPTIMIZED_THREADS=$(( TOTAL_THREADS * 90 / 100 ))
+
+# Distribute threads evenly across NUMA nodes
+THREADS_PER_NODE=$(( OPTIMIZED_THREADS / NUMA_NODES ))
+
+# Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU (NUMA-aware)
 ./SRBMiner-MULTI \
   --algorithm sha3x \
   --pool <POOL>:6118 \
@@ -70,9 +79,9 @@ CPU_THREADS=$(( TOTAL_THREADS * 90 / 100 ))  # Set exactly 90% of available thre
   --wallet <TARI_WALLET>+<MONERO_WALLET>=200000.<WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
-  --cpu-threads $CPU_THREADS \
+  --cpu-threads NUMA:0=$THREADS_PER_NODE, NUMA:1=$THREADS_PER_NODE \
   --disable-msr-tweaks \
-  --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
  ```
 Replace <TARI_WALLET> and <MONERO_WALLET> with wallets on Tari Universe<br>
 Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
@@ -146,19 +155,29 @@ Copy this code into notepad
 Then paste the edited version into the start_cpu_mining.sh file
 ```
 #!/bin/bash
-TOTAL_THREADS=$(nproc)
-CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Sets exactly 95% of available threads
 
-# Start SRBMiner with SHA3X (Tari) on GPU + RandomX (Monero) on CPU
+# Detect total CPU threads
+TOTAL_THREADS=$(nproc)
+
+# Detect NUMA nodes
+NUMA_NODES=$(lscpu | grep "NUMA node(s)" | awk '{print $NF}')
+
+# Set optimized thread usage (85%)
+OPTIMIZED_THREADS=$(( TOTAL_THREADS * 85 / 100 ))
+
+# Distribute threads across NUMA nodes
+THREADS_PER_NODE=$(( OPTIMIZED_THREADS / NUMA_NODES ))
+
+# Start SRBMiner with NUMA-aware thread allocation
 ./SRBMiner-MULTI \
   --algorithm randomx \
   --pool mine-tari-monero.luckypool.io:8118 \
   --wallet <TARI_WALLET>+<MONERO_WALLET>=200000.<WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
-  --cpu-threads $CPU_THREADS \
+  --cpu-threads NUMA:0=$THREADS_PER_NODE, NUMA:1=$THREADS_PER_NODE \
   --disable-msr-tweaks \
-  --log-file /root/SRBMiner-Multi-2-8-8/debug.log \
+  --log-file /root/SRBMiner-Multi-2-8-8/debug.log
  ```
 Replace <TARI_WALLET> and <MONERO_WALLET> with wallets on Tari Universe<br>
 Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
@@ -243,18 +262,27 @@ Copy this code into notepad
 Then paste the edited version into the start_cpu_mining.sh file
 ```
 #!/bin/bash
+
 # Get total available CPU threads dynamically
 TOTAL_THREADS=$(nproc)
-CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Set exactly 95% of available threads
 
-# Start SRBMiner with RandomX (Tari) on CPU
+# Detect NUMA nodes dynamically
+NUMA_NODES=$(lscpu | grep "NUMA node(s)" | awk '{print $NF}')
+
+# Set optimized CPU usage (85%)
+OPTIMIZED_THREADS=$(( TOTAL_THREADS * 85 / 100 ))
+
+# Distribute threads evenly across NUMA nodes
+THREADS_PER_NODE=$(( OPTIMIZED_THREADS / NUMA_NODES ))
+
+# Start SRBMiner with RandomX (Tari) on CPU using NUMA-aware thread allocation
 ./SRBMiner-MULTI \
   --algorithm randomx \
   --pool hatchlings.rxpool.net:3333 \
   --wallet <TARI_WALLET>.<WORKER_NAME> \
   --enable-cpu \
   --disable-huge-pages \
-  --cpu-threads $CPU_THREADS \
+  --cpu-threads NUMA:0=$THREADS_PER_NODE, NUMA:1=$THREADS_PER_NODE \
   --disable-msr-tweaks \
   --log-file /root/SRBMiner-Multi-2-8-8/cpu_debug.log
  ```
