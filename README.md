@@ -203,7 +203,7 @@ cd SRBMiner-Multi-2-8-8
 ```
 
 # OPTION 3
-2️⃣A Create GPU Mining Startup Script
+3️⃣A Create GPU Mining Startup Script
 ```bash
 nano start_gpu_mining.sh
 ```
@@ -233,7 +233,7 @@ Save the file:
 - Press Y (Confirm save changes)
 - Press Enter (Save the file with the same name)
 <br><br>
-2️⃣B Create CPU Mining Startup Script
+3️⃣B Create CPU Mining Startup Script
 ```bash
 nano start_cpu_mining.sh
 ```
@@ -261,6 +261,11 @@ CPU_THREADS=$(( TOTAL_THREADS * 95 / 100 ))  # Set exactly 95% of available thre
 Replace <TARI_WALLET> with wallets on Tari Universe<br>
 Replace <WORKER_NAME> with anything to help us identify this specific server.<br>
 <br>
+Replace PORT if you are running a specilaized setup.
+3333 Low-end CPU
+5555 Fast/Multi CPU
+9000 SSL/TLS
+
 Paste the edited version into the start_cpu_mining.sh file<br>
 
 Save the file:
@@ -269,17 +274,17 @@ Save the file:
 - Press Enter (Save the file with the same name)
 <br><br>
 
-2️⃣C  Make both files executable
+3️⃣C  Make both files executable
 ```
 chmod +x start_cpu_mining.sh start_gpu_mining.sh
 ```
 <br><br>
-2️⃣D Start GPU Mining
+3️⃣D Start GPU Mining
 ```
 ./start_gpu_mining.sh
 ```
 <br><br>
-2️⃣E
+3️⃣E
 Open a Second PowerShell Tab<br> 
 Log in with same information
 ```bash
@@ -289,13 +294,13 @@ ssh root@<server_ip> -p <port#>
 Enter SSH Password
 <br><br>
 
-2️⃣F
+3️⃣F
 Change Directory to SRBMiner
 ```
 cd SRBMiner-Multi-2-8-8
 ```
 <br><br>
-2️⃣G Start CPU Miner
+3️⃣G Start CPU Miner
 ```
 ./start_cpu_mining.sh
 ```
