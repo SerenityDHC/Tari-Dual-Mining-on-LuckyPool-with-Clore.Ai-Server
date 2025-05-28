@@ -146,7 +146,7 @@ Save the file:
 - Press Enter (Save the file with the same name)
 <br><br>
 2️⃣B Create CPU Mining Startup Script
-```bash
+```
 nano start_cpu_mining.sh
 ```
 <br><br>
