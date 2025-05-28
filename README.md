@@ -256,7 +256,9 @@ Save the file:
 <br>
 <br>
 3️⃣B Create CPU Mining Startup Script
-```bash
+<br>
+
+```
 nano start_cpu_mining.sh
 ```
 <br><br>
